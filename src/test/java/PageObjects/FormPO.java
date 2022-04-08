@@ -11,8 +11,8 @@ import java.time.Duration;
 public class FormPO {
 
     WebDriver driver;
-    int TimeImplicitWait = 30;
-    int TimeExplicitWait = 20;
+    int timeimplicitwait = 30;
+    int timeexplicitwait = 20;
 
     //Elementos para cadastro
     By linkedButtonForm = By.id("htmlformtest");
@@ -38,8 +38,8 @@ public class FormPO {
 
     public void PreenchendoForm(String name, String password, String comment) throws Exception {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TimeExplicitWait));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TimeImplicitWait));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeexplicitwait));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeimplicitwait));
 
         driver.findElement(linkedButtonForm).click();
         wait.until(ExpectedConditions.elementToBeClickable(inputUserName)).click();
