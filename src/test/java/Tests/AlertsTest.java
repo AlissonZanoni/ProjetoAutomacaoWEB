@@ -18,7 +18,7 @@ public class AlertsTest extends DriverSettings {
         driver.manage().window().maximize();
 
         AlertsPO alertpo = new AlertsPO(driver);
-        alertpo.AutomatizandoAlerts();
+        alertpo.AutomatizandoAlerts("Hello World");
     }
 
     @After
